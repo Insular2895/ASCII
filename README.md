@@ -21,9 +21,8 @@ Store, generate, manage, and reuse ASCII banners for terminal tools, scripts, an
 
 ## Preview
 
-<div align="center">
-  <img src="assets/preview.png" alt="ASCII Banner Preview" width="900">
-</div>
+<img width="800" height="300" alt="image" src="https://github.com/user-attachments/assets/917289bd-fcfa-440a-9d31-7316c005a8e4" />
+
 
 This repository helps you:
 
