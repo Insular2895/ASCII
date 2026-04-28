@@ -23,7 +23,7 @@ Store, generate, manage, and reuse ASCII banners for terminal tools, scripts, an
 
 <img width="800" height="300" alt="image" src="https://github.com/user-attachments/assets/917289bd-fcfa-440a-9d31-7316c005a8e4" />
 
-
+---
 
 
 This repository helps you:
