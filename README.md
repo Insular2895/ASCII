@@ -1,12 +1,41 @@
+<div align="center">
+
 # ASCII Banner Kit
 
-A small utility to store, generate, manage, and reuse ASCII banners inside terminal tools, scripts, and CLI projects.
+Store, generate, manage, and reuse ASCII banners for terminal tools, scripts, and CLI projects.
 
-This project lets you keep a library of ASCII banners and quickly display one when a program starts.
+<p>
+  <img src="https://img.shields.io/badge/Python-CLI%20Utility-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python CLI Utility">
+  <img src="https://img.shields.io/badge/ASCII-Art-black?style=for-the-badge" alt="ASCII Art">
+  <img src="https://img.shields.io/badge/Terminal-Friendly-111111?style=for-the-badge&logo=gnubash&logoColor=white" alt="Terminal Friendly">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
+</p>
+
+<p>
+  Generate ASCII banners from images, keep a reusable banner library, and plug them into any terminal-based project.
+</p>
+
+</div>
 
 ---
 
-## Folder structure
+## Preview
+
+<div align="center">
+  <img src="assets/preview.png" alt="ASCII Banner Preview" width="900">
+</div>
+
+This repository helps you:
+
+- convert images into ASCII `.txt` banners
+- keep all banners in a reusable library
+- choose one default active banner
+- display banners when your terminal tool starts
+- reuse the same system in Python or Node.js projects
+
+---
+
+## Project structure
 
 ```txt
 ASCII/
@@ -21,25 +50,26 @@ ASCII/
 │   ├── Robin.txt
 │   └── ...
 ├── assets/
-│   └── banner.txt
+│   ├── banner.txt
+│   └── preview.png
 ├── show_banner.py
 └── README.md
 ```
 
 ---
 
-## How it works
+## Core idea
 
 There are two important folders:
 
 ```txt
-banners/ = your full ASCII banner library
-assets/banner.txt = the default active banner
+banners/ = full ASCII banner library
+assets/banner.txt = current default banner
 ```
 
 ### `banners/`
 
-This folder stores all your available banners.
+This folder contains all your saved ASCII banners.
 
 Example:
 
@@ -49,7 +79,7 @@ banners/Diable.txt
 banners/Robin.txt
 ```
 
-You can display one of them by name:
+You can display one by name:
 
 ```bash
 python3 show_banner.py Goku
@@ -57,7 +87,7 @@ python3 show_banner.py Goku
 
 ### `assets/banner.txt`
 
-This is the default banner.
+This file is the active default banner.
 
 When you run:
 
@@ -71,13 +101,13 @@ the script displays:
 assets/banner.txt
 ```
 
-So if you want `Goku.txt` to be the default banner, run:
+To make `Goku.txt` your default banner:
 
 ```bash
 cp banners/Goku.txt assets/banner.txt
 ```
 
-If you want `Diable.txt` to be the default banner, run:
+To make `Diable.txt` your default banner:
 
 ```bash
 cp banners/Diable.txt assets/banner.txt
@@ -85,17 +115,22 @@ cp banners/Diable.txt assets/banner.txt
 
 ---
 
-## Generate ASCII banners from images
+## Features
 
-You can create ASCII banners from `.jpg`, `.jpeg`, or `.png` images.
-
-This project mainly uses `jp2a`, which works best with JPEG images.
+- Generate ASCII banners from `.jpg`, `.jpeg`, and `.png`
+- Organize banners in a clean library
+- Set one default banner for easy reuse
+- Display a specific or random banner
+- Reuse the same banner system across projects
+- Simple integration for Python and Node.js
 
 ---
 
-### Install jp2a
+## Install dependencies
 
-On macOS:
+This project mainly uses `jp2a`, which works best with JPEG images.
+
+### macOS
 
 ```bash
 brew install jp2a
@@ -109,21 +144,21 @@ jp2a --version
 
 ---
 
-### Convert one JPEG image to ASCII
+## Generate ASCII banners from images
 
-Example:
+### Convert one JPEG image to ASCII
 
 ```bash
 jp2a --width=100 ascii-assets/img_here/IMG_6770.jpeg > banners/IMG_6770.txt
 ```
 
-Then test it:
+Test it:
 
 ```bash
 python3 show_banner.py IMG_6770
 ```
 
-To make it the default banner:
+Make it the default banner:
 
 ```bash
 cp banners/IMG_6770.txt assets/banner.txt
@@ -133,7 +168,7 @@ cp banners/IMG_6770.txt assets/banner.txt
 
 ### Convert all JPEG images to ASCII
 
-Put your images in:
+Put your source images in:
 
 ```txt
 ascii-assets/img_here/
@@ -166,7 +201,7 @@ If your source image is a `.png`, convert it to `.jpg` first using macOS `sips`:
 sips -s format jpeg ascii-assets/img_here/logo.png --out ascii-assets/img_here/logo.jpg
 ```
 
-Then convert the JPEG to ASCII:
+Then convert it to ASCII:
 
 ```bash
 jp2a --width=100 ascii-assets/img_here/logo.jpg > banners/logo.txt
@@ -183,7 +218,7 @@ for img in ascii-assets/img_here/*.png; do
 done
 ```
 
-Then convert all `.jpg` images to ASCII:
+Then convert all `.jpg` files to ASCII:
 
 ```bash
 for img in ascii-assets/img_here/*.jpg; do
@@ -196,7 +231,7 @@ done
 
 ### Test different widths
 
-If the result is not clean, try different widths:
+If the output is not clean enough, try different widths:
 
 ```bash
 jp2a --width=80 ascii-assets/img_here/logo.jpg > banners/logo_w80.txt
@@ -204,7 +239,7 @@ jp2a --width=120 ascii-assets/img_here/logo.jpg > banners/logo_w120.txt
 jp2a --width=160 ascii-assets/img_here/logo.jpg > banners/logo_w160.txt
 ```
 
-Then preview:
+Preview one result:
 
 ```bash
 cat banners/logo_w120.txt
@@ -212,9 +247,9 @@ cat banners/logo_w120.txt
 
 ---
 
-### Invert the rendering
+### Invert rendering
 
-Some dark images look better with inverted rendering:
+Some dark images look better inverted:
 
 ```bash
 jp2a --width=120 --invert ascii-assets/img_here/logo.jpg > banners/logo_invert.txt
@@ -222,16 +257,16 @@ jp2a --width=120 --invert ascii-assets/img_here/logo.jpg > banners/logo_invert.t
 
 ---
 
-### Recommended image settings
+### Recommended source image settings
 
 For better results:
 
 ```txt
 Use high-contrast images
 Avoid complex backgrounds
-Prefer logos, faces, icons, silhouettes
+Prefer logos, icons, faces, silhouettes
 Use width between 80 and 120 for terminal display
-Avoid huge ASCII outputs for README files
+Avoid giant ASCII outputs for README usage
 ```
 
 ---
@@ -266,7 +301,7 @@ python3 show_banner.py --random
 
 ## Add a new banner
 
-Put your ASCII file inside `banners/`:
+Put your ASCII `.txt` file inside `banners/`:
 
 ```txt
 banners/my_banner.txt
@@ -278,7 +313,7 @@ Then test it:
 python3 show_banner.py my_banner
 ```
 
-To make it the default banner:
+To make it your default banner:
 
 ```bash
 cp banners/my_banner.txt assets/banner.txt
@@ -286,9 +321,9 @@ cp banners/my_banner.txt assets/banner.txt
 
 ---
 
-## Use this inside another Python project
+## Use this in another Python project
 
-In your other project, create this structure:
+Create this structure:
 
 ```txt
 my-project/
@@ -338,9 +373,9 @@ the banner appears in the terminal.
 
 ---
 
-## Use this inside another Node.js project
+## Use this in another Node.js project
 
-In your Node.js project, create:
+Create this structure:
 
 ```txt
 my-project/
@@ -383,9 +418,9 @@ node index.js
 
 ---
 
-## Important note about GitHub
+## Important GitHub note
 
-The banner does not appear during `git clone`.
+The banner does **not** appear during `git clone`.
 
 When someone runs:
 
@@ -395,7 +430,7 @@ git clone https://github.com/username/project.git
 
 GitHub only downloads the files. It does not execute your code.
 
-The banner appears when the user runs your tool, for example:
+The banner appears when the user runs the project, for example:
 
 ```bash
 python3 main.py
@@ -422,10 +457,10 @@ This is normal and safer.
 ```txt
 1. Put source images in ascii-assets/img_here/
 2. Convert images to ASCII .txt files
-3. Store generated banners in banners/
+3. Store all generated banners in banners/
 4. Choose one default banner
 5. Copy it to assets/banner.txt
-6. Call show_banner() at the start of your project
+6. Call show_banner() at startup
 7. Push the project to GitHub
 ```
 
@@ -433,23 +468,21 @@ This is normal and safer.
 
 ## Best practices
 
-Keep banners readable:
-
 ```txt
 Recommended width: 80 to 120 characters
-Recommended height: less than 40 lines
+Recommended height: under 40 lines
 Format: .txt
 Best use: terminal startup, CLI tools, install scripts
 Avoid: huge photo-style ASCII blocks in README files
 ```
 
-For GitHub README visuals, use a real image instead:
+For GitHub visuals, prefer a real image like:
 
 ```md
-![Project Banner](assets/banner.png)
+![Preview](assets/preview.png)
 ```
 
-Use ASCII mainly inside terminals.
+Use ASCII mainly inside the terminal, and regular images for README presentation.
 
 ---
 
