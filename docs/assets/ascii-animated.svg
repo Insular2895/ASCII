@@ -1,0 +1,26 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ASCII Banner Kit animated logo</title>
+  <desc id="desc">Animated terminal cursor and ASCII grid mark.</desc>
+  <rect width="160" height="160" rx="34" fill="#080C12"/>
+  <rect x="24" y="36" width="112" height="88" rx="12" fill="#101820" stroke="#38BDF8" stroke-width="4"/>
+  <circle cx="39" cy="51" r="4" fill="#EF4444"/>
+  <circle cx="53" cy="51" r="4" fill="#FACC15"/>
+  <circle cx="67" cy="51" r="4" fill="#22C55E"/>
+  <g font-family="monospace" font-size="18" font-weight="700" fill="#E5E7EB">
+    <text x="36" y="84">&gt; ASCII</text>
+    <text x="36" y="106">KIT</text>
+    <rect x="78" y="91" width="12" height="18" fill="#FACC15">
+      <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <g stroke="#334155" stroke-width="2">
+    <path d="M101 70v39"/>
+    <path d="M116 70v39"/>
+    <path d="M96 82h34"/>
+    <path d="M96 96h34"/>
+  </g>
+  <circle cx="116" cy="96" r="4" fill="#38BDF8">
+    <animate attributeName="r" values="4;8;4" dur="1.6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.35;1" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+</svg>
