@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="118" height="28" viewBox="0 0 118 28" role="img" aria-labelledby="title desc">
+  <title id="title">ASCII Art animated badge</title>
+  <desc id="desc">Animated local README badge for ASCII art.</desc>
+  <defs>
+    <linearGradient id="badgeBg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#20252e"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="118" height="28" rx="6" fill="url(#badgeBg)"/>
+  <rect x="0.5" y="0.5" width="117" height="27" rx="5.5" fill="none" stroke="#ffffff" stroke-opacity="0.16"/>
+  <g transform="translate(10 6)" font-family="monospace" font-size="13" font-weight="700">
+    <text x="0" y="13" fill="#67e8f9">&gt;_</text>
+    <rect x="17" y="2" width="6" height="13" fill="#facc15">
+      <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <text x="39" y="18" font-family="Inter,Arial,sans-serif" font-size="12" font-weight="700" fill="#ffffff">ASCII</text>
+  <text x="82" y="18" font-family="Inter,Arial,sans-serif" font-size="12" fill="#e5e7eb">Art</text>
+</svg>

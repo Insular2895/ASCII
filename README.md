@@ -7,10 +7,10 @@
 Store, generate, manage, and reuse ASCII banners for terminal tools, scripts, and CLI projects.
 
 <p>
-  <img src="https://img.shields.io/badge/Python-CLI%20Utility-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python CLI Utility">
-  <img src="https://img.shields.io/badge/ASCII-Art-black?style=for-the-badge" alt="ASCII Art">
-  <img src="https://img.shields.io/badge/Terminal-Friendly-111111?style=for-the-badge&logo=gnubash&logoColor=white" alt="Terminal Friendly">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License">
+  <img src="docs/assets/badge-python-cli-animated.svg" alt="Python CLI Utility" height="28">
+  <img src="docs/assets/badge-ascii-art-animated.svg" alt="ASCII Art" height="28">
+  <img src="docs/assets/badge-terminal-friendly-animated.svg" alt="Terminal Friendly" height="28">
+  <img src="docs/assets/badge-license-mit-animated.svg" alt="MIT License" height="28">
 </p>
 
 <p>
