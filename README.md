@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="docs/assets/ascii-animated.svg" alt="ASCII Banner Kit animated logo" width="112" />
-
 # ASCII Banner Kit
 
 Store, generate, manage, and reuse ASCII banners for terminal tools, scripts, and CLI projects.
